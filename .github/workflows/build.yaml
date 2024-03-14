@@ -16,4 +16,3 @@ jobs:
         run: |
           mvn -B package
           ls -lh target
-          
