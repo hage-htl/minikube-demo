@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: echo
+spec:
+#  entryPoints:
+#    - websecure
+  routes:
+  - kind: Rule
+    match: Host(`demo.cloud.key.fit`)
+    services:
+    - name: echoserver
+      port: 80
+#  tls:
+#    secretName: default-ingress-cert
